@@ -1,0 +1,94 @@
+{
+  "pizzas": [
+    {
+      "id": 0,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/dc5dc4e9-932a-4abf-9472-dfb6326ea9ee.jpg",
+      "name": "Мексиканская",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/12faf8763c694ce7a51afe75401d19d6_292x292.jpeg",
+      "name": "Сладкая",
+      "types": [0],
+      "sizes": [26, 40],
+      "price": [450, 700],
+      "category": 1,
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/f5efd84790134654b9eb84c89f2c9ca8_292x292.jpeg",
+      "name": "Лосось",
+      "types": [0, 1],
+      "sizes": [30, 40],
+      "price": [450, 650],
+      "category": 2,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/d640c5fb-0944-4123-9363-c5706c725546.jpg",
+      "name": "С ананасами",
+      "types": [1],
+      "sizes": [26, 30],
+      "price": [450, 650],
+      "category": 3,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/03e6638d-0185-415f-9781-bc906e3fd3f5.jpg",
+      "name": "Сырная",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 4,
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/6081d085ef5748e9b67ad7e699ea65cb_292x292.jpeg",
+      "name": "До-до",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 5,
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/8a813e3b734e457c848a60fc70a100d5_292x292.jpeg",
+      "name": "Бургер",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 6,
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/ff4b4951-6257-49fe-9c72-f0e272d8a503.jpg",
+      "name": "Цыпленок",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 7,
+      "rating": 4
+    },
+    {
+      "id": 8,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/14414e03-0322-4751-a431-820c8ce84e58.jpg",
+      "name": "Цыпленок барбекю",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": [450, 650, 700],
+      "category": 3,
+      "rating": 4
+    }
+  ]
+}
