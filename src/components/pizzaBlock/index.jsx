@@ -29,6 +29,7 @@ function PizzaBlock({
       id,
       name,
       image,
+      price: price[indexSize],
       size: activeSize,
       type: activeType,
       typeText: availibleTypes[activeType],
