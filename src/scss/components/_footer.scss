@@ -1,0 +1,54 @@
+.footer {
+  background: url(../../assets/img/footer.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 2rem 0;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__item {
+    &-contacts {
+      color: #fff;
+    }
+    &-social {
+      display: flex;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      justify-content: center;
+      padding: 1rem 3rem;
+      margin: auto;
+      a {
+        margin: 0 0.5rem;
+      }
+      svg,
+      img {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    a,
+    p {
+      color: #fff;
+      margin: 0;
+      font-weight: 400;
+      font-size: 1rem;
+      span {
+        color: inherit;
+        display: block;
+        font-weight: inherit;
+      }
+    }
+    .anticon {
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+  }
+}

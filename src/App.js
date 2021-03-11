@@ -1,56 +1,43 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Header } from "./components";
-import { Home, Cart } from "./pages";
-// import { connect } from "react-redux"; для классового компонента
+import { useDispatch, useSelector } from "react-redux";
+
+import { Footer, Header } from "./components";
+import { Home, Cart, Delivery, Contacts } from "./pages";
+import { fetchPizzas, fetchCategories } from "./redux/actions/pizzas";
+
 function App() {
+  const dispatch = useDispatch();
+  const { category, sortBy } = useSelector(({ filter }) => filter);
+
+  React.useEffect(() => {
+    dispatch(fetchPizzas(category, sortBy));
+  }, [category, sortBy]);
+
+  React.useEffect(() => {
+    dispatch(fetchCategories());
+  }, []);
+
   return (
     <div className='wrapper'>
-      <Header />
-      <div className='content'>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/cart' component={Cart} />
-      </div>
+      <Route exact path='/'>
+        <Header />
+        <Home category={category} sortBy={sortBy} />
+      </Route>
+      <Route path='/cart'>
+        <Header className='header-cart' />
+        <Cart />
+      </Route>
+      <Route path='/delivery'>
+        <Header className='header-bg' />
+        <Delivery />
+      </Route>
+      <Route path='/contacts'>
+        <Header className='header-bg' />
+        <Contacts />
+      </Route>
+      <Footer />
     </div>
   );
 }
 export default App;
-// -------------------------------class redux------------------------
-// class App extends React.Component {
-//   componentDidMount() {
-//     axios.get("http://localhost:3000/db.json").then(({ data }) => {
-//       // console.log(setPizzas(data.pizzas));
-//       this.props.setPizzasProp(data.pizzas);
-//     });
-//   }
-
-//   render() {
-//     // console.log(this.props);
-
-//     return (
-//       <div className='wrapper'>
-//         <Header />
-//         <div className='content'>
-//           <Route exact path='/'>
-//             <Home items={this.props.items} />
-//           </Route>
-//           <Route exact path='/cart' component={Cart} />
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-// const mapStateToProps = (state) => {
-//   return {
-//     items: state.pizzas.items,
-//   };
-// };
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     setPizzasProp: (items) => dispatch(setPizzas(items)),
-//   };
-// };
-// // const mapDispatchToProps = {
-// //   setPizzas,
-// // };
-// export default connect(mapStateToProps, mapDispatchToProps)(App);

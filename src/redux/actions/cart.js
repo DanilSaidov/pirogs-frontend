@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const addPizzaToCart = (pizzaObj) => ({
   type: "ADD_PIZZA_TO_CART",
   payload: pizzaObj,
@@ -17,3 +19,6 @@ export const cartMinusItem = (id) => ({
   type: "CART_MINUS_ITEM",
   payload: id,
 });
+export const newOrder = (item) => () => {
+  return axios.post("/order", item);
+};

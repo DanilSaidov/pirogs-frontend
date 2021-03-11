@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button } from "../";
+import { Col } from "antd";
 import classNames from "classnames";
 
 function PizzaBlock({
-  id,
+  _id,
   name,
   image,
   price,
@@ -13,7 +14,7 @@ function PizzaBlock({
   onClickAddPizza,
   addedPizza,
 }) {
-  const availibleTypes = ["тонкое", "традиционное"];
+  const availibleTypes = ["традиционное", "фирменное"];
   const availableSizes = [26, 30, 40];
   const [activeType, setActiveType] = React.useState(types[0]);
   const onSelectType = (idx) => {
@@ -26,20 +27,20 @@ function PizzaBlock({
   };
   const onAddPizza = () => {
     const obj = {
-      id,
+      _id,
       name,
       image,
       price: price[indexSize],
       size: activeSize,
       type: activeType,
       typeText: availibleTypes[activeType],
-      filter: `${id}_${activeSize}_${activeType}`,
+      filter: `${_id}_${activeSize}_${activeType}`,
     };
     onClickAddPizza(obj);
   };
 
   return (
-    <div className='pizza-block'>
+    <Col xs={24} sm={12} md={8} lg={6} className='pizza-block'>
       <img className='pizza-block__image' src={image} alt='Pizza' />
       <h4 className='pizza-block__title'>{name}</h4>
       <div className='pizza-block__selector'>
@@ -93,20 +94,20 @@ function PizzaBlock({
           {addedPizza && <i>{addedPizza}</i>}
         </Button>
       </div>
-    </div>
+    </Col>
   );
 }
 PizzaBlock.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.arrayOf(PropTypes.number),
   types: PropTypes.arrayOf(PropTypes.number).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
   onClickAddPizza: PropTypes.func.isRequired,
   addedPizza: PropTypes.number,
 };
 PizzaBlock.defaultProps = {
-  name: "Название пиццы",
+  name: "Название пирога",
   price: 0,
   types: [],
   sizes: [],

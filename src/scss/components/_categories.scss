@@ -1,14 +1,15 @@
-@import 'variables';
+@import "variables";
 
 .categories {
   ul {
     display: flex;
+    flex-wrap: wrap;
 
     li {
       background-color: #f9f9f9;
-      padding: 13px 30px;
-      border-radius: 30px;
-      margin-right: 10px;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      margin-right: 0.6rem;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
@@ -23,7 +24,7 @@
       }
 
       &.active {
-        background-color: #282828;
+        background-color: #221805;
         color: #fff;
       }
     }

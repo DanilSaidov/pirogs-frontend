@@ -1,6 +1,7 @@
 const initialState = {
   items: [],
   isLoaded: false,
+  categories: [],
 };
 const pizzas = (state = initialState, action) => {
   switch (action.type) {
@@ -14,6 +15,11 @@ const pizzas = (state = initialState, action) => {
       return {
         ...state,
         isLoaded: false,
+      };
+    case "SET_CATEGORIES":
+      return {
+        ...state,
+        categories: action.payload,
       };
     default:
       return state;

@@ -10,7 +10,7 @@ const LoaderBlock = (props) => (
     backgroundColor='#f3f3f3'
     foregroundColor='#ecebeb'
     {...props}>
-    <circle cx='129' cy='127' r='127' />
+    <rect x='25' y='0' rx='4' ry='4' width='260' height='260' />
     <rect x='0' y='270' rx='4' ry='4' width='315' height='30' />
     <rect x='149' y='363' rx='0' ry='0' width='12' height='2' />
     <rect x='0' y='315' rx='4' ry='4' width='315' height='82' />

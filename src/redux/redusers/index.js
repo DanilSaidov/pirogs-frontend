@@ -3,9 +3,9 @@ import filter from "./filters";
 import pizzas from "./pizzas";
 import cart from "./cart";
 
-const rootStore = combineReducers({
+const rootReducer = combineReducers({
   filter,
   pizzas,
   cart,
 });
-export default rootStore;
+export default rootReducer;

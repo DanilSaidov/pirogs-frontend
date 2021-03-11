@@ -46,12 +46,12 @@ function Catigories({ activeCategory, items, onClickCategory }) {
         {items &&
           items.map((item, idx) => (
             <li
-              className={activeCategory === idx ? "active" : ""}
+              className={activeCategory === item._id ? "active" : ""}
               onClick={() => {
-                onClickCategory(idx);
+                onClickCategory(item._id);
               }}
-              key={`${item}_ ${idx}`}>
-              {item}
+              key={`${item._id}_ ${idx}`}>
+              {item.name}
             </li>
           ))}
       </ul>
@@ -59,8 +59,11 @@ function Catigories({ activeCategory, items, onClickCategory }) {
   );
 }
 Catigories.propTypes = {
-  activeCategory: PropTypes.oneOf([PropTypes.number, null]),
-  items: PropTypes.arrayOf(PropTypes.string),
+  activeCategory: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(null),
+  ]),
+  items: PropTypes.arrayOf(PropTypes.object),
   onClickCategory: PropTypes.func,
 };
 Catigories.defaultProps = {

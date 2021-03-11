@@ -47,8 +47,6 @@ const cart = (state = initialState, action) => {
       };
     }
     case "CART_PLUS_ITEM": {
-      console.log(state, state.items, action.payload);
-
       const newObjItems = [
         ...state.items[action.payload].items,
         state.items[action.payload].items[0],

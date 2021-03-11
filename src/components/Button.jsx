@@ -1,30 +1,22 @@
 import React from "react";
 import classNames from "classnames"; // библиоткека классов от props
-// class Button extends React.Component {
-//   componentDidMount() {
-//     // компонент отобразился
-//   }
-//   componentDidUpdate() {
-//     //   компонент обновилс
-//   }
-//   render() {
-//    <button
-//   className={classNames("button", {
-//     "button--outline": props.outline,
-//   })}>
-//   {props.children}
-// </button>
-//   }
-// }
-// деструктуризация
-const Button = ({ onClick, className, outline, children }) => {
+import { LoadingOutlined } from "@ant-design/icons";
+const Button = ({
+  onClick,
+  className,
+  outline,
+  children,
+  loading,
+  disabled,
+}) => {
   return (
     <button
       onClick={onClick}
+      disabled={disabled || loading}
       className={classNames("button", className, {
         "button--outline": outline,
       })}>
-      {children}
+      {children} {loading && <LoadingOutlined />}
     </button>
   );
 };
